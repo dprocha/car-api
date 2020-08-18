@@ -7,6 +7,7 @@ applications:
   path: ./target/car-api.jar
   env:
     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 14.0.2_+ } }'
+    JBP_CONFIG_SPRING_AUTO_RECONFIGURATION: '{enabled: false}'
     SPRING_PROFILES_ACTIVE: cloud
   services:
   - car-db
