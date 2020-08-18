@@ -13,5 +13,3 @@ applications:
   - car-redis
   - service-registry
   - config-server
-#  - car-rabbitmq
-#  - autoscaler
