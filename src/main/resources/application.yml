@@ -65,15 +65,3 @@ spring:
   liquibase:
     contexts: local
     drop-first: true
-
----
-spring:
-  profiles: cloud
-  datasource:
-    hikari:
-      driver-class-name: com.mysql.cj.jdbc.Driver
-  jpa:
-    database-platform: org.hibernate.dialect.MySQL5Dialect
-  liquibase:
-    contexts: local
-    drop-first: true
