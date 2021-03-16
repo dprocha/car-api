@@ -35,7 +35,17 @@ car:
       email: "ddarocha@vmware.com"
 ---
 spring:
-  profiles: h2
+  config:
+    activate:
+      on-profile: h2
+  cloud:
+    config:
+      enabled: off
+    discovery:
+        enabled: off
+    service-registry:
+      auto-registration:
+        enabled: off
   datasource:
     hikari:
       driver-class-name: org.h2.Driver
@@ -53,7 +63,17 @@ spring:
 
 ---
 spring:
-  profiles: mysql
+  config:
+    activate:
+      on-profile: mysql
+  cloud:
+    config:
+      enabled: false
+      discovery:
+        enabled: false
+    service-registry:
+      auto-registration:
+        enabled: false
   datasource:
     hikari:
       driver-class-name: com.mysql.cj.jdbc.Driver

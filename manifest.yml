@@ -4,9 +4,10 @@ applications:
   memory: 1G
   instances: 1
   random-route: true
+  #java_buildpack_offline
   path: ./target/car-api.jar
   env:
-    JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.0.8_+ } }'
+    JBP_CONFIG_OPEN_JDK_JRE: '{ "jre": { version: 11.+ } }'
     JBP_CONFIG_SPRING_AUTO_RECONFIGURATION: '{enabled: false}'
     SPRING_PROFILES_ACTIVE: cloud
   services:
